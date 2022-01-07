@@ -30,4 +30,4 @@ document.addEventListener("keypress", (event) => {
   }
 });
 
-button.addEventListener("click", ()
+button.addEventListener("click", )
