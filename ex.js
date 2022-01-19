@@ -52,5 +52,5 @@ document.addEventListener("keypress", (event) => {
 });
 
 
-button.getElementById("key").addEventListener("click", music);
-function music()
+// button.getElementById("key").addEventListener("click", music);
+// function music()
