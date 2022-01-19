@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Drum challenge - Piano</title>
-</head>
-<body>
-  <header>
-    <h1>Piano</h1>
-  </header>
-  <section class="keyboard">
-      <button class="key1">Press A
-        <span id="sound1"></span>
-        <audio (id="audio1">)
-          <source src="/sounds/1.wav"> 
-        </audio>
-      </button>
-      <button class="key2">Press S
-        <span id="sound2"></span>
-        <audio id="audio2">
-          <source src="/sounds/2.wav"> 
-        </audio>
-      </button>
-      <button class="key3">Press D
-        <span id="sound3"></span>
-        <audio id="audio3">
-          <source src="/sounds/3.wav"> 
-        </audio>
-      </button>
-      <button class="key4">Press F
-        <span id="sound4"></span>
-        <audio id="audio4">
-          <source src="/sounds/4.wav"> 
-        </audio>
-      </button>
-      <div data-key="65" class="key">
-  </section>
-  <script src="/script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drum challenge - but we are making a Piano</title>
+  </head>
+  <body>
+    <header>
+      <h1>PIANO</h1>
+      <h2>Use your keys or click on the keyboard.</h2>
+    </header>
+    <section id="keyboard">
+      <div class="keySound"></div>
+      <div class="keys">
+        <div data-key="65" class="key" data-note="A">
+          <span class="sound">A</span>
+        </div>
+        <div data-key="83" class="key" data-note="S">
+          <span class="sound">S</span>
+        </div>
+        <div data-key="68" class="key" data-note="D">
+          <span class="sound">D</span>
+        </div>
+        <div data-key="70" class="key" data-note="F">
+          <span class="sound">F</span>
+        </div>
+        <div data-key="71" class="key" data-note="G">
+          <span class="sound">G</span>
+        </div>
+        <div data-key="72" class="key" data-note="H">
+          <span class="sound">H</span>
+        </div>
+        <div data-key="74" class="key" data-note="J">
+          <span class="sound">J</span>
+        </div>
+      </div>
+      <audio data-key="65" src="/sounds/040.wav"></audio>
+      <audio data-key="83" src="/sounds/041.wav"></audio>
+      <audio data-key="68" src="/sounds/042.wav"></audio>
+      <audio data-key="70" src="/sounds/043.wav"></audio>
+      <audio data-key="71" src="/sounds/044.wav"></audio>
+      <audio data-key="72" src="/sounds/045.wav"></audio>
+      <audio data-key="74" src="/sounds/046.wav"></audio>
+    </section>
+    <script src="/ex.js"></script>
   </body>
 </html>

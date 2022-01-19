@@ -1,33 +1,32 @@
-const sound1 = document.getElementById("sound1");
-const sound2 = document.getElementById("sound2");
-const sound3 = document.getElementById("sound3");
-const sound4 = document.getElementById("sound4");
-const buttonA = document.getElementsByClassName("key1");
-const buttonS = document.getElementsByClassName("key2");
-const buttonD = document.getElementsByClassName("key3");
-const buttonF = document.getElementsByClassName("key4");
+const keys = document.querySelectorAll(".key")
+const note = document.querySelector(".keySound")
+const sound = document.querySelectorAll(".sound")
 
-document.addEventListener("keypress", (event) => {
-  if (event.key == "a") {
-    const keySound1 = document.getElementById("audio1");
-    keySound1.volume = 0.1;
-    keySound1.play();
-  }
-  if (event.key == "s") {
-    const keySound2 = document.getElementById("audio2");
-    keySound2.volume = 0.1;
-    keySound2.play();
-  }
-  if (event.key == "d") {
-    const keySound3 = document.getElementById("audio3");
-    keySound3.volume = 0.1;
-    keySound3.play();
-  }
-  if (event.key == "f") {
-    const keySound4 = document.getElementById("audio4");
-    keySound4.volume = 0.1;
-    keySound4.play();
-  }
-});
+function playSound(e) {
+  const audio = document.querySelector('audio[data-key="${e.keyCode}"]'),
+  key = document.querySelector('.key[data-key="${e.keyCode}"]');
 
-button.addEventListener("click", )
+    if (!key) return;
+
+    const keyNote =key.getAttribute("data-note");
+
+    key.classList.add("playing");
+    note.innerHTML = keyNote;
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function removeTransition(e) {
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
+}
+
+function soundOn(e, index) {
+  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
+}
+
+sound.forEach(soundOn);
+
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+window.addEventListener("keydown", playSound);

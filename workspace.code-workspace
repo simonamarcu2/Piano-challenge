@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "../website-clone"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "piano",
+    "liveServer.settings.port": 5501
+  }
+}

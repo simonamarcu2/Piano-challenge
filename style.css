@@ -1,67 +1,55 @@
-*{
-  background-color: blanchedalmond;
+* {
+  color: aliceblue;
+  text-align: center;
 }
 
-h1{
+body {
+  background-image: url(/image/3014068.jpg);
+}
+
+h1 {
   font-size: 100px;
   display: flex;
   justify-content: center;
+  letter-spacing: 0.2em;
 }
 
-.keyboard {
-  font-size: 20px;
+#keyboard {
   display: flex;
+  /* line-height: 1; */
+  transition: all 0.1s ease;
   justify-content: center;
 }
 
-.key1, .key2, .key3, .key4 {
-  border: 2px solid black;
-  background-color: white;
+.keys {
   display: flex;
-  justify-content:center;
-  align-items: end;
-  height: 200px;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  max-width: 700px;
+  /* background-color: white; */
+  margin: 300px 0 0 0;
+  border: 0;
+}
+
+.key {
+  border: 4px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
   width: 100px;
-  background-color: white;
-  margin: 0 5px;
+  background-color: aliceblue;
 }
 
-.key1:hover {
-  background-color: rgb(205, 173, 238);
+.sound {
+  width: 100%;
+  bottom: 7px;
+  transition: opacity 0.3s ease-out;
+  font-size: 20px;
+  color: black;
 }
 
-.key1:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px lightskyblue;
-}
-
-.key2:hover{
-  background-color: red;
-}
-
-.key2:focus{
-  outline: none;
-  box-shadow: 0 0 0 5px lightskyblue;
-}
-
-.key3:hover {
-  background-color: royalblue;
-}
-
-.key3:focus{
-  outline: none;
-  box-shadow: 0 0 0 5px lightskyblue;
-}
-
-.key4:hover{
-  background-color: green;
-}
-
-.key4:focus{
-  outline: none;
-  box-shadow: 0 0 0 5px lightskyblue;
-}
-
-#sound1:hover{
+#sound1:hover {
   background-color: rgb(205, 173, 238);
 }
