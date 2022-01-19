@@ -55,10 +55,22 @@ h1 {
   color: black;
 }
 
-#key:focus {
+#buttonA:focus,
+#buttonS:focus,
+#buttonD:focus,
+#buttonF:focus,
+#buttonG:focus,
+#buttonH:focus,
+#buttonJ:focus {
   background-color: blueviolet;
   cursor: pointer;
 }
-#key:hover {
+#buttonA:hover,
+#buttonS:hover,
+#buttonD:hover,
+#buttonF:hover,
+#buttonG:hover,
+#buttonH:hover,
+#buttonJ:hover {
   cursor: pointer;
 }
