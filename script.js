@@ -1,32 +1,32 @@
-const keys = document.querySelectorAll(".key")
-const note = document.querySelector(".keySound")
-const sound = document.querySelectorAll(".sound")
+// const keys = document.querySelectorAll(".key")
+// const note = document.querySelector(".keySound")
+// const sound = document.querySelectorAll(".sound")
 
-function playSound(e) {
-  const audio = document.querySelector('audio[data-key="${e.keyCode}"]'),
-  key = document.querySelector('.key[data-key="${e.keyCode}"]');
+// function playSound(e) {
+//   const audio = document.querySelector('audio[data-key="${e.keyCode}"]'),
+//   key = document.querySelector('.key[data-key="${e.keyCode}"]');
 
-    if (!key) return;
+//     if (!key) return;
 
-    const keyNote =key.getAttribute("data-note");
+//     const keyNote =key.getAttribute("data-note");
 
-    key.classList.add("playing");
-    note.innerHTML = keyNote;
-    audio.currentTime = 0;
-    audio.play();
-}
+//     key.classList.add("playing");
+//     note.innerHTML = keyNote;
+//     audio.currentTime = 0;
+//     audio.play();
+// }
 
-function removeTransition(e) {
-  if (e.propertyName !== "transform") return;
-  this.classList.remove("playing");
-}
+// function removeTransition(e) {
+//   if (e.propertyName !== "transform") return;
+//   this.classList.remove("playing");
+// }
 
-function soundOn(e, index) {
-  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
-}
+// function soundOn(e, index) {
+//   e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
+// }
 
-sound.forEach(soundOn);
+// sound.forEach(soundOn);
 
-keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+// keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
-window.addEventListener("keydown", playSound);
+// window.addEventListener("keydown", playSound);

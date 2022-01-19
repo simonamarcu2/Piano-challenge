@@ -16,7 +16,6 @@ h1 {
 
 #keyboard {
   display: flex;
-  /* line-height: 1; */
   transition: all 0.1s ease;
   justify-content: center;
 }
@@ -27,7 +26,6 @@ h1 {
   height: 300px;
   width: 100%;
   max-width: 700px;
-  /* background-color: white; */
   margin: 300px 0 0 0;
   border: 0;
 }
@@ -50,6 +48,33 @@ h1 {
   color: black;
 }
 
-#sound1:hover {
-  background-color: rgb(205, 173, 238);
+.key:focus {
+  background-color: blueviolet;
+  cursor: pointer;
 }
+
+/* .key[data-key="65"] {
+  left: 7%;
+}
+.key[data-key="83"] {
+  left: 17%;
+}
+.key[data-key="68"] {
+  left: 27%;
+}
+.key[data-key="70"] {
+  left: 37%;
+}
+.key[data-key="71"] {
+  left: 47%;
+}
+.key[data-key="71"] {
+  left: 57%;
+}
+.key[data-key="74"] {
+  left: 67%;
+} */
+
+/* #sound1:hover {
+  background-color: rgb(205, 173, 238);
+} */
